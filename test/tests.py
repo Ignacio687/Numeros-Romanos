@@ -1,0 +1,92 @@
+import unittest
+from main.classdecimal import decimalnumber
+from main.classroman import romannumber
+
+roman1 = romannumber()
+decimal1 = decimalnumber()
+class Decimal_to_RomanTestCase(unittest.TestCase):
+    def test_1(self):
+        self.assertEqual(decimal1.decimal_to_roman(1), "I")
+    def test_2(self):
+        self.assertEqual(decimal1.decimal_to_roman(2), "II")
+    def test_3(self):
+        self.assertEqual(decimal1.decimal_to_roman(3), "III")
+    def test_4(self):
+        self.assertEqual(decimal1.decimal_to_roman(4), "IV")
+    def test_5(self):
+        self.assertEqual(decimal1.decimal_to_roman(5), "V")
+    def test_6(self):
+        self.assertEqual(decimal1.decimal_to_roman(6), "VI")
+    def test_7(self):
+        self.assertEqual(decimal1.decimal_to_roman(8), "VIII")
+    def test_8(self):
+        self.assertEqual(decimal1.decimal_to_roman(9), "IX")
+    def test_9(self):
+        self.assertEqual(decimal1.decimal_to_roman(10), "X")
+    def test_10(self):
+        self.assertEqual(decimal1.decimal_to_roman(25), "XXV")
+    def test_11(self):
+        self.assertEqual(decimal1.decimal_to_roman(37), "XXXVII")
+    def test_12(self):
+        self.assertEqual(decimal1.decimal_to_roman(50), "L")
+    def test_13(self):
+        self.assertEqual(decimal1.decimal_to_roman(67), "LXVII")
+    def test_14(self):
+        self.assertEqual(decimal1.decimal_to_roman(93), "XCIII")
+    def test_15(self):
+        self.assertEqual(decimal1.decimal_to_roman(123), "CXXIII")
+    def test_16(self):
+        self.assertEqual(decimal1.decimal_to_roman(172), "CLXXII")
+    def test_17(self):
+        self.assertEqual(decimal1.decimal_to_roman(239), "CCXXXIX")
+    def test_18(self):
+        self.assertEqual(decimal1.decimal_to_roman(358), "CCCLVIII")
+    def test_19(self):
+        self.assertEqual(decimal1.decimal_to_roman(377), "CCCLXXVII")
+    def test_20(self):
+        self.assertEqual(decimal1.decimal_to_roman(399), "CCCXCIX")
+
+class Roman_to_DecimalTestCase(unittest.TestCase):
+    def test_1(self):
+        self.assertEqual(roman1.roman_to_decimal("I"), 1)
+    def test_2(self):
+        self.assertEqual(roman1.roman_to_decimal("II"), 2)
+    def test_3(self):
+        self.assertEqual(roman1.roman_to_decimal("III"), 3)
+    def test_4(self):
+        self.assertEqual(roman1.roman_to_decimal("IV"), 4)
+    def test_5(self):
+        self.assertEqual(roman1.roman_to_decimal("V"), 5)
+    def test_6(self):
+        self.assertEqual(roman1.roman_to_decimal("VI"), 6)
+    def test_7(self):
+        self.assertEqual(roman1.roman_to_decimal("VIII"), 8)
+    def test_8(self):
+        self.assertEqual(roman1.roman_to_decimal("IX"), 9)
+    def test_9(self):
+        self.assertEqual(roman1.roman_to_decimal("X"), 10)
+    def test_10(self):
+        self.assertEqual(roman1.roman_to_decimal("XXV"), 25)
+    def test_11(self):
+        self.assertEqual(roman1.roman_to_decimal("XXXVII"), 37)
+    def test_12(self):
+        self.assertEqual(roman1.roman_to_decimal("L"), 50)
+    def test_13(self):
+        self.assertEqual(roman1.roman_to_decimal("LXVII"), 67)
+    def test_14(self):
+        self.assertEqual(roman1.roman_to_decimal("XCIII"), 93)
+    def test_15(self):
+        self.assertEqual(roman1.roman_to_decimal("CXXIII"), 123)
+    def test_16(self):
+        self.assertEqual(roman1.roman_to_decimal("CLXXII"), 172)
+    def test_17(self):
+        self.assertEqual(roman1.roman_to_decimal("CCXXXIX"), 239)
+    def test_18(self):
+        self.assertEqual(roman1.roman_to_decimal("CCCLVIII"), 358)
+    def test_19(self):
+        self.assertEqual(roman1.roman_to_decimal("CCCLXXVII"), 377)
+    def test_20(self):
+        self.assertEqual(roman1.roman_to_decimal("CCCXCIX"), 399)
+
+# if __name__=="__main__":
+#     unittest.main()
